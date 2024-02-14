@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="icon" href="../img/porscheGT3rs.png" type="image/png">
+    <title>SUV</title>
+     <style>
+        .titulo {
+            text-align: justify; 
+            font-size: 50px;
+        }
+
+        body {
+            background-color: rgb(241, 241, 241);
+            margin: 0;
+        }
+
+        .inicio {
+            background-color: #ffffff;
+            justify-content: center;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+        }
+
+        .inicio:hover{
+            background-color: #ededed;
+            cursor: pointer;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info a{
+            color: black;
+            padding: 5px;
+        }
+
+        #text {
+            font-size: 20px;
+            line-height: 30px;
+            width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card {
+            transition: 0.5s;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+        }
+        .card:hover {
+            transition: 0.5s;
+            transform: scale(1.03);
+        }
+
+        .renting {
+            width: 110px;
+            height: 40px;
+            background-color: #ffffff;
+            border: 2px solid rgb(255, 11, 11);
+        }
+
+        .renting:hover {
+            background-color: #fb9999;
+            cursor: pointer;
+        }
+
+        /* Pantallas medianas */
+        @media screen and (max-width: 1500px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        /* Pantallas medianas 2 */
+
+        @media screen and (max-width: 1100px) {
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+            }
+            #text {
+                font-size: 25px;
+            }
+        }
+
+        /* Pantalla pequeña */
+        @media screen and (max-width: 614px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 60%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+
+        /* Pantalla pequeña 2 */
+        @media screen and (max-width: 414px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 70%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+   </style>
+       </style>
+</head>
+<body>
+    <div class="info">
+        <h1 class="titulo">RentDrive</h1>
+        <a href="coches.html">Regresar</a>
+
+        <button onclick="inicio()" class="inicio">Inicio</button>
+        <p id="text">¡Explora la aventura y la versatilidad con las exclusivas opciones de coches SUV de RentDrive, tu compañía de renting de confianza! Sumérgete en nuestra amplia colección que fusiona potencia, elegancia y tecnología de última generación.
+        <br> <b>¡Con RentDrive, el vehículo no solo te lleva a tu destino, sino que se convierte en parte esencial de tu travesía!</b></p>
+    </div>
+    <div class="content">
+        <div class="card">
+            <img src="../img/suv/cq5dam.resized.img.585.low.time1657793442939.png" width="290px" alt="">
+            <h3>BMW iX1 (2024)</h3>
+            <p>610€/mes</p>
+            <p>Gasolina - 204CV</p>
+            <button onclick="renting('SUV', 'BMW iX1')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/2022_land_rover_range_rover_first_edition_4wd_suv_af_charante_grey_metallizada_e003b82439.png" width="265px" alt="">
+            <h3>Land Rover Evoque (2022)</h3>
+            <p>590€/mes</p>
+            <p>Diesel - 190CV</p>
+            <button onclick="renting('SUV', 'Land Rover Evoque')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/SUV-Car-PNG-Download-Image.png" width="300px" alt="">
+            <h3>Hyundai Creta (2021)</h3>
+            <p>560€/mes</p>
+            <p>Híbrido - 150CV</p>
+            <button onclick="renting('SUV', 'Hyundai Creta')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/car.png" width="300px" alt="">
+            <h3>Gac Motor (2024)</h3>
+            <p>520€/mes</p>
+            <p>Eléctrico - 180CV</p>
+            <button onclick="renting('SUV', 'Gac Motor')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/SUV-Car-PNG-Free-Image.png" width="280px" alt="">
+            <h3>Mercedes GLE (2021)</h3>
+            <p>570€/mes</p>
+            <p>Gasolina - 210CV</p>
+            <button onclick="renting('SUV', 'Mercedes GLE')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/Red-SUV-PNG-Clipart.png" width="340px" alt="">
+            <h3>Mazda CX-9 (2022)</h3>
+            <p>600€/mes</p>
+            <p>Diesel - 175CV</p>
+            <button onclick="renting()" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/suv/day-exterior-4.png" width="390px" alt="">
+            <h3>Lexus UX 250h<h3>
+            <p>510€/mes</p>
+            <p>Gasolina - 155CV</p>
+            <button onclick="renting('SUV', 'Lexus UX 250h')" class="renting">Renting!</button>
+        </div>
+    </div>
+    <script>
+        function inicio(){
+            window.location.href = "/../index.html"
+        }
+        function renting(tipo, modelo){
+            window.location.href= "renting.html?tipo=" + tipo + "&modelo=" + modelo;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.7.1.js"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!---->
+    <!--Icono de la página-->
+    <link rel="icon" href="img/porscheGT3rs.png" type="image/png">
+    <!---->
+    <title>RentDrive - Inicio</title>
+</head>
+<body>
+    <!--Menú principal-->
+        <div class="menu">
+            <span class="menu-titulo">☰ Menú</span>
+            <button onclick="coches()" class="menu-button">Renting</button>
+            <button onclick="compañia()" class="menu-button">Compañía</button>
+            <button onclick="soporte()" class="menu-button">Soporte</button>
+        </div>
+
+    <!--Título de la página-->
+    <div class="titulo">
+        <h1>Rent</h1><h1 id="secundario">Drive</h1>
+    </div>
+    
+    <script>
+
+        /* Script para elegir la ruta donde queremos dirigirnos */
+
+        function coches(){
+                window.location.href = "coches/coches.html"
+            }
+        function compañia(){
+                window.location.href = "compañia/compañia.html"
+            }
+        function soporte(){
+                window.location.href = "soporte/soporte.html"
+            }
+
+        /* Script para la animación del título */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const elemento = document.querySelector(".titulo");
+
+            function animacion() {
+                const windowHeight = window.innerHeight;
+                const elementHeight = elemento.clientHeight;
+
+                const posFinal = (windowHeight - elementHeight) / 3;
+
+                elemento.style.transition = "transform 1.5s ease";
+                elemento.style.transform = `translateY(${posFinal}px)`;
+            }
+
+            setTimeout(animacion, 200);
+        });
+    </script>
+</body>
+</html>

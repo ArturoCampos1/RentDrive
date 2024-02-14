@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="icon" href="../img/porscheGT3rs.png" type="image/png">
+    <title>Alta Gama</title>
+     <style>
+        /* Estilos principales */
+        body {
+            background-color: rgb(241, 241, 241);
+            margin: 0;
+        }
+
+        .titulo {
+            text-align: justify; 
+            font-size: 50px;
+        }
+
+        .inicio {
+            background-color: #ffffff;
+            justify-content: center;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+        }
+
+        .inicio:hover{
+            background-color: #ededed;
+            cursor: pointer;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Alineación vertical al centro */
+        }
+
+        .info a{
+            color: black;
+            padding: 5px;
+        }
+        /* */
+
+        /*Texto informativo*/
+        #text {
+            font-size: 20px;
+            line-height: 30px;
+            width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Contenido principal*/
+        .content {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        /* Cartas de los coches */
+        .card {
+            transition: 0.5s;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+        }
+        .card:hover {
+            transition: 0.5s;
+            transform: scale(1.03);
+        }
+        /* Boton de renting */
+        .renting {
+            width: 110px;
+            height: 40px;
+            background-color: #ffffff;
+            border: 2px solid rgb(255, 11, 11);
+        }
+
+        .renting:hover {
+            background-color: #fb9999;
+            cursor: pointer;
+        }
+
+        /* Pantallas medianas */
+        @media screen and (max-width: 1500px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        /* Pantallas medianas 2 */
+
+        @media screen and (max-width: 1100px) {
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+            }
+            #text {
+                font-size: 25px;
+            }
+        }
+
+        /* Pantalla pequeña */
+        @media screen and (max-width: 614px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 60%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+
+        /* Pantalla pequeña 2 */
+        @media screen and (max-width: 414px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 70%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+   </style>
+       </style>
+</head>
+<body>
+    <!--Información principal-->
+    <div class="info">
+        <h1 class="titulo">RentDrive</h1>
+        <a href="coches.html">Regresar</a>
+
+        <button onclick="inicio()" class="inicio">Inicio</button>
+        <p id="text">Sumérgete en el lujo y la sofisticación con las exclusivas opciones de coches de alta gama de RentDrive, tu compañía de renting de confianza. Descubre una colección sin igual que fusiona elegancia, potencia y tecnología de última generación.
+        <br> <b>En RentDrive, entendemos que el vehículo no es solo un medio de transporte, sino una declaración de estilo y prestigio</b></p>
+    </div>
+    <!--Contenido de la página y coches-->
+    <div class="content">
+        <div class="card">
+            <img src="../img/altagama/911.png" width="270px" alt="">
+            <h3>Porsche 911 (2022)</h3>
+            <p>720€/mes</p>
+            <p>Gasolina - 380CV</p>
+            <button onclick="renting('Alta Gama', 'Porsche 911')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/altagama/Nissan GTR35.png" width="325px" alt="">
+            <h3>Nissan GTR35 (2021)</h3>
+            <p>680€/mes</p>
+            <p>Gasolina - 400CV</p>
+            <button onclick="renting('Alta Gama', 'Nissan GTR35')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/altagama/CorvetteZ06.png" width="370px" alt="">
+            <h3>Corvette Z06 (2023)</h3>
+            <p>750€/mes</p>
+            <p>Diesel - 670CV</p>
+            <button onclick="renting('Alta Gama', 'Corvette Z06')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/altagama/ferrari458i.png" width="430px" alt="">
+            <h3>Ferrari 458 Italia (2022)</h3>
+            <p>900€/mes</p>
+            <p>Gasolina - 680CV</p>
+            <button onclick="renting('Alta Gama', 'Ferrari 458 Italia')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/altagama/porsche-model.png" width="430px" alt="">
+            <h3>Porsche Panamera (2023)</h3>
+            <p>810€/mes</p>
+            <p>Eléctrico - 540CV</p>
+            <button onclick="renting('Alta Gama', 'Porsche Panamera')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/altagama/bmwM8.png" width="380px" alt="">
+            <h3>BMW M8 Competition (2023)</h3>
+            <p>990€/mes</p>
+            <p>Gasolina - 690CV</p>
+            <button onclick="renting('Alta Gama', 'BMW M8 Competition')" class="renting">Renting!</button>
+        </div>
+    </div>
+    <script>
+        function inicio(){
+            window.location.href = "../index.html"
+        }
+        function renting(tipo, modelo){
+        window.location.href= "renting.html?tipo=" + tipo + "&modelo=" + modelo;
+        }
+    </script>
+</body>
+</html>

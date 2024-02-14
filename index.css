@@ -1,0 +1,98 @@
+/* Estilo para todo el cuerpo de la página*/
+body {
+    background-image: url(img/porscheGT3rs.png);
+    background-size: cover;
+    background-color: rgb(241, 241, 241);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+}
+/* Estilo del título*/
+.titulo {
+    font-family: 'Bitter', serif;
+    display: flex;
+    font-size: 80px;
+    justify-content: center;
+    color: rgb(187, 49, 49);
+    text-shadow: 8px 8px 8px rgba(45, 27, 27, 0.8);
+}
+
+#secundario{
+    color: rgb(209, 131, 131);
+}
+/* */
+
+/* Estilo del menú */
+.menu-titulo{
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: black;
+}
+
+.menu {
+    display: flex;
+  }
+  
+  .menu-button {
+    width: 10%;
+    background-color: rgb(241, 241, 241);
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    border: 2px solid black;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover{
+    background-color: rgb(155, 155, 155);
+    cursor: pointer;
+  }
+  .menu-titulo{
+    cursor: default;
+  }
+
+/* Media Querie principal */
+
+@media screen and (max-width: 729px) {
+    .titulo{
+        font-size: 40px;
+    }
+
+    body {
+        background-image: url(img/porscheGT3rs.png);
+        background-color: rgb(241, 241, 241);
+        color: white;
+        margin: 0;
+    }   
+
+    .menu-titulo{
+        font-size: 20px;
+        padding: 10px;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        color: black;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1fr);
+      }
+      
+      .menu-button {
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+        color: rgb(0, 0, 0);
+        padding: 5px 5px;
+        border: 2px solid black;
+        margin: 5px;
+        cursor: pointer;
+      }
+}

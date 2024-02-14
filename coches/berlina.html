@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="icon" href="../img/porscheGT3rs.png" type="image/png">
+    <title>Berlina</title>
+     <style>
+        /* Título y presentación */
+        .titulo {
+            text-align: justify; 
+            font-size: 50px;
+        }
+
+        body {
+            background-color: rgb(241, 241, 241);
+            margin: 0;
+        }
+
+        .inicio {
+            background-color: #ffffff;
+            justify-content: center;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+        }
+
+        .inicio:hover{
+            background-color: #ededed;
+            cursor: pointer;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info a{
+            color: black;
+            padding: 5px;
+        }
+        /* Contenido e información principal */
+        #text {
+            font-size: 20px;
+            line-height: 30px;
+            width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        /* Estilo de las cartas */
+        .card {
+            transition: 0.5s;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+        }
+        .card:hover {
+            transition: 0.5s;
+            transform: scale(1.03);
+        }
+        /* Botón de renting */
+        .renting {
+            width: 110px;
+            height: 40px;
+            background-color: #ffffff;
+            border: 2px solid rgb(255, 11, 11);
+        }
+
+        .renting:hover {
+            background-color: #fb9999;
+            cursor: pointer;
+        }
+
+        /* Pantallas medianas */
+        @media screen and (max-width: 1500px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        /* Pantallas medianas 2 */
+
+        @media screen and (max-width: 1100px) {
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+            }
+            #text {
+                font-size: 25px;
+            }
+        }
+
+        /* Pantalla pequeña */
+        @media screen and (max-width: 614px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 60%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+
+        /* Pantalla pequeña 2 */
+        @media screen and (max-width: 414px) {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 10px;
+                gap: 10px;
+            }
+            .card {
+                width: 90%;
+            }
+            .card img {
+                width: 70%;
+            }
+            #text {
+                font-size: 18px;
+                text-align: justify;
+            }
+            .card:hover {
+                transition: 1s;
+                transform: none;
+            }
+        }
+   </style>
+       </style>
+</head>
+<body>
+    <!--Información principal-->
+    <div class="info">
+        <h1 class="titulo">RentDrive</h1>
+        <a href="coches.html">Regresar</a>
+        <button onclick="inicio()" class="inicio">Inicio</button>
+        <p id="text">Descubre la elegancia y la comodidad con las exclusivas opciones de coches berlina de RentDrive, tu compañía de renting de confianza.Ofrecemos una amplia colección que combinan estilo, rendimiento y tecnología de vanguardia. <br> <b>¡Con RentDrive, el vehículo es tan importante como el viaje!</b></p>
+    </div>
+    
+    <!--Contenido de la página y coches-->
+    <div class="content">
+        <div class="card">
+            <img src="../img/berlina/renault megane web.png" width="270px" alt="">
+            <h3>Renault Megane (2022)</h3>
+            <p>380€/mes</p>
+            <p>Diesel - 115CV</p>
+            <button onclick="renting('Berlina', 'Renault Megane')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/mercedes-benz-2021-classe-c.png" width="325px" alt="">
+            <h3>Mercedes Benz CLE (2021)</h3>
+            <p>580€/mes</p>
+            <p>Gasolina - 160CV</p>
+            <button onclick="renting('Berlina','Mercedes Benz CLE')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/Xceed.png" width="370px" alt="">
+            <h3>Kia Xceed (2022)</h3>
+            <p>450€/mes</p>
+            <p>Híbrido - 150CV</p>
+            <button onclick="renting('Berlina','Kia Xceed')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/seatIbiza.png" width="430px" alt="">
+            <h3>Seat Ibiza (2022)</h3>
+            <p>370€/mes</p>
+            <p>Gasolina - 80CV</p>
+            <button onclick="renting('Berlina','Seat Ibiza')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/bmw-3-series-modellfinder.png" width="430px" alt="">
+            <h3>BMW Serie 3 (2022)</h3>
+            <p>650€/mes</p>
+            <p>Gasolina - 380CV</p>
+            <button onclick="renting('Berlina','BMW Serie 3')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/model-s-blanco.png" width="380px" alt="">
+            <h3>Tesla Model S (2022)</h3>
+            <p>610€/mes</p>
+            <p>Elécrico - 450CV</p>
+            <button onclick="renting('Berlina', 'Tesla Model S')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/fiatTipo.png" width="470px" alt="">
+            <h3>Fiat Tipo (2020)</h3>
+            <p>410€/mes</p>
+            <p>Gasolina - 115CV</p>
+            <button onclick="renting('Berlina', 'Fiat Tipo')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/Hyundai-i10-Klass-Auto-sin-fondo-principal-avanti.png" width="410px" alt="">
+            <h3>Hyundai i10 (2023)</h3>
+            <p>390€/mes</p>
+            <p>Gasolina - 100CV</p>
+            <button onclick="renting('Berlina', 'Hyundai i10')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/volkswagen-arteon-2022.png" width="370px" alt="">
+            <h3>Volkswagen Arteon R-Line (2023)</h3>
+            <p>490€/mes</p>
+            <p>Híbrido - 145CV</p>  
+            <button onclick="renting('Berlina', 'Volkswagen Arteon R-Line')" class="renting">Renting!</button>
+        </div>
+        <div class="card">
+            <img src="../img/berlina/Renault-PNG-Background.png" width="420px" alt="">
+            <h3>Renault Fluence (2019)</h3>
+            <p>420€/mes</p>
+            <p>Diesel - 120CV</p>
+            <button onclick="renting('Berlina', 'Renault Fluence')" class="renting">Renting!</button>
+        </div>
+    </div>
+    <script>
+        function inicio(){
+                window.location.href = "/../index.html"
+            }
+        function renting(tipo, modelo){
+            window.location.href= "renting.html?tipo=" + tipo + "&modelo=" + modelo;
+            }
+    </script>
+</body>
+</html>

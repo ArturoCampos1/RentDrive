@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="icon" href="../img/porscheGT3rs.png" type="image/png">
+    <title>Sobre nosotros</title>
+     <style>
+        /* Cuerpo página */    
+        body{
+            background-image: url(../img/porscheGT3rs.png);
+            background-size: cover;
+            background-color: rgb(241, 241, 241);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            padding: 0; 
+        }
+        .titulo {
+            text-align: justify; 
+            font-size: 50px;
+        }
+        /* Título y presentación */
+        .inicio {
+            background-color: #ffffff;
+            justify-content: center;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+        }
+
+        .inicio:hover{
+            background-color: #ededed;
+            cursor: pointer;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        .info a{
+            color: black;
+            padding: 5px;
+        }
+
+        .content p{
+            line-height: 35px;
+            font-size: 18px;
+        }
+
+        .content h4{
+            font-size: 25px;
+        }
+
+        .card {
+            background-color: rgba(241, 241, 241, 0.493);
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+   </style>
+       </style>
+</head>
+<body>
+    <!--Información principal-->
+    <div class="info">
+        <h1 class="titulo">RentDrive</h1>
+        <a href="compañia.html">Regresar</a>
+        <script>
+            function inicio(){
+                window.location.href = "/../index.html"
+            }
+        </script>
+        <button onclick="inicio()" class="inicio">Inicio</button>
+    </div>
+    <!--Contenido de la página-->
+    <div class="content">
+        <div class="card">
+            <h4>¿Qué es RentDrive?</h4>
+            <p>En RentDrive nos definimos como una empresa de alquiler de coches que ofrece una amplia gama de vehículos para satisfacer las necesidades de movilidad de los clientes, con un enfoque en la comodidad, la calidad y la libertad de conducción.</p>
+        </div>
+        <div class="card">
+            <h4>¿Porqué RentDrive?</h4>
+            <p>El nombre "RentDrive" fusiona el alquiler de vehículos con la emoción de conducir, reflejando nuestra misión de ofrecer libertad sobre ruedas de manera accesible y emocionante.</p>
+        </div>
+        <div class="card">
+            <h4>Misión, visión y valores</h4>
+            <p>Nuestra misión en RentDrive es facilitar la movilidad al ofrecer una experiencia de alquiler de coches sin complicaciones, centrada en la comodidad y la calidad del servicio. Aspiramos a convertirnos en la opción preferida de alquiler de coches, brindando libertad sobre ruedas de manera accesible y emocionante. Estamos comprometidos con la calidad, la transparencia, el servicio excepcional y la satisfacción del cliente en todo momento.</p>
+        </div>
+    </div>
+</body>
+</html>
